@@ -1,0 +1,12 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2.75em 7em;
+  background: #1c1c1c;
+}
+
+.container {
+  background: #23252c;
+  width: 317px;
+  border-radius: 10px;
+}
