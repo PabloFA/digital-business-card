@@ -8,7 +8,7 @@ export default function Info() {
   return (
     <div className="info-section">
       <img src="/profile-pic.jpg" />
-      <h1 className="title">Pablo Avendano</h1>
+      <h1 className="title">Pablo Avendaño</h1>
       <p className="subtitle">Frontend Developer</p>
       <small>pablo-dev.com</small>
       <div className="btns">
