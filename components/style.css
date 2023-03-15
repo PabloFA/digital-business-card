@@ -42,6 +42,7 @@ p {
 }
 
 .btn {
+  color: white;
   font-size: 0.875em;
   width: 115px;
   padding: 0.5625em 0;
@@ -51,21 +52,13 @@ p {
   justify-content: center;
   gap: 0.5em;
   text-decoration: none;
+  position: relative;
+  z-index: 0;
 }
 
 .icon {
   width: 16px;
   padding-right: 0.5em;
-}
-
-.btn-email {
-  color: #374151;
-  background: white;
-}
-
-.btn-linkedin {
-  color: white;
-  background: #5093e2;
 }
 
 .content {
@@ -77,11 +70,90 @@ p {
   color: #161619;
 }
 
+.social-btn:hover {
+  color: #918e9b;
+}
+
 .icon-btn {
   padding-top: 2px;
   text-align: center;
-  background: #918e9b;
   width: 30px;
   height: 25px;
   border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+}
+
+.btn:before,
+.icon-btn:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 6px;
+}
+
+.btn:active,
+.icon-btn:active {
+  color: white;
+}
+
+.btn:active:after,
+.icon-btn:after {
+  background: transparent;
+}
+
+.btn:hover:before,
+.icon-btn:hover:before {
+  opacity: 1;
+}
+
+.btn:after,
+.icon-btn:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #262831;
+  left: 0;
+  top: 0;
+  border-radius: 6px;
+}
+
+.icon-btn:after {
+  background: #4c4b52;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }

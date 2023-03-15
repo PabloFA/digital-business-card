@@ -12,14 +12,11 @@ export default function Info() {
       <p className="subtitle">Frontend Developer</p>
       <small>pablo-dev.com</small>
       <div className="btns">
-        <a className="btn btn-email" href="mailto:avendanio.pablo@gmail.com">
+        <a className="btn" href="mailto:avendanio.pablo@gmail.com">
           <FontAwesomeIcon icon={faEnvelope} />
           Email
         </a>
-        <a
-          className="btn btn-linkedin"
-          href="https://www.linkedin.com/in/pablo-avendaño91/"
-        >
+        <a className="btn" href="https://www.linkedin.com/in/pablo-avendaño91/">
           <FontAwesomeIcon icon={faLinkedinIn} />
           LinkedIn
         </a>
